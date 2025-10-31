@@ -68,6 +68,14 @@ Git Root
 
 ---
 
+## 🎁 Sample Model
+
+このリポジトリに含まれる **「SAMPLE_MODEL」** から生成できるサンプルモデルを以下で確認できます。
+
+👉 [サンプルモデルを表示する](https://sukima-log.github.io/Pages_bpy-text-lab_sample/)
+（作成できる3Dモデルを確認できます）
+
+
 ## 🧩 Supported Versions
 
 - **Blender 4.2** : 動作確認
