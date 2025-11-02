@@ -1,4 +1,4 @@
-# 🧱 bpy-text-lab : BPY Text-Based 3D Modeling
+# 🧱 bpy_text_lab : BPY Text-Based 3D Modeling
 
 **Blender Python API（BPY）を用いた、フルテキストベースの 3D CG デザイン環境**
 
@@ -73,7 +73,7 @@ Git Root
 
 このリポジトリに含まれる **「SAMPLE_MODEL」** から生成できるサンプルモデルを以下で確認できます。
 
-👉 [サンプルモデルを表示する](https://sukima-log.github.io/Pages_bpy-text-lab_sample/)
+👉 [サンプルモデルを表示する](https://sukima-log.github.io/Pages_bpy_text_lab_sample/)
 （作成できる3Dモデルの例を確認できます）
 
 
@@ -199,7 +199,7 @@ Tools/Export/export_glb_gltf.py
 |---------|------------|---------|--------------------------------------|-----------|
 | 0.1   | 2025-11-01 | Added   | 初回リリース <br/> テンプレート追加 | sukimalog.com |
 | 0.11   | 2025-11-02 | Added | 参考画像読み込み関数追加 <br /> image_reference_import | sukimalog.com |
-| x.x.x   | xxxx-xx-xx | xxxxx   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | |
+| 0.12   | 2025-11-02 | Modify   | サンプル動作確認ミス <br /> 修正済 | sukimalog.com |
 | x.x.x   | xxxx-xx-xx | xxxxx   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | |
 | x.x.x   | xxxx-xx-xx | xxxxx   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | |
 

@@ -14,5 +14,5 @@ if git_root:
     if parent not in sys.path:
         sys.path.append(parent)
 # Common Setting
-from BPY_3DCG_ENV.Common.common_top import *
+from bpy_text_lab.Common.common_top import *
 #========================================================================================

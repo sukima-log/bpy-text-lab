@@ -14,15 +14,15 @@ if git_root:
     if parent not in sys.path:
         sys.path.append(parent)
 # Common Setting
-from BPY_3DCG_ENV.Common.common_top import *
+from bpy_text_lab.Common.common_top import *
 #========================================================================================
 # ==================================================================
 # = Pre Process
 # ==================================================================
-from BPY_3DCG_ENV.Assets.mdl.SAMPLE_MODEL import (
+from bpy_text_lab.Assets.mdl.SAMPLE_MODEL import (
     glb, wrap, d00_mdl, d01_uv_unwrap, d02_mtal, d03_bake, d04_bone, d05_animation, d06_shape_key
 )
-from BPY_3DCG_ENV.Assets.parts import (
+from bpy_text_lab.Assets.parts import (
     model, material
 )
 # ==================================================================

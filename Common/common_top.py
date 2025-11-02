@@ -41,7 +41,7 @@ if git_root:
         sys.path.append(parent)
 
 # Common Lib
-from BPY_3DCG_ENV.Mylib import  (
+from bpy_text_lab.Mylib import  (
     mdl_cm_lib
 ,   mtal_cm_lib
 ,   mm_cm_lib

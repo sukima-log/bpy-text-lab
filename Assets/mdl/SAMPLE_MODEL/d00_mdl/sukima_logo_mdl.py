@@ -14,15 +14,15 @@ if git_root:
     if parent not in sys.path:
         sys.path.append(parent)
 # Common Setting
-from BPY_3DCG_ENV.Common.common_top import *
+from bpy_text_lab.Common.common_top import *
 #========================================================================================
 # ==================================================================
 # = Pre Process
 # ==================================================================
-from BPY_3DCG_ENV.Assets.mdl.SAMPLE_MODEL import (
+from bpy_text_lab.Assets.mdl.SAMPLE_MODEL import (
     glb, wrap, d00_mdl, d01_uv_unwrap, d02_mtal, d03_bake, d04_bone, d05_animation, d06_shape_key
 )
-from BPY_3DCG_ENV.Assets.parts import (
+from bpy_text_lab.Assets.parts import (
     model, material
 )
 # ==================================================================
@@ -34,7 +34,7 @@ from BPY_3DCG_ENV.Assets.parts import (
 def sukima_logo_mdl(
     sukima_logo=glb.glb.sukima_logo
 ):
-    if (glb.glb.sukima_logo_flg):
+    if (glb.glb.glb_exist_obj_chk(obj_list=[sukima_logo], gen_flag=True)):
         # オブジェクト追加
         bpy.ops.mesh.primitive_cube_add(
             size=1                  # 1辺長
@@ -397,7 +397,7 @@ def sukima_logo_mdl(
 def sukima_logo_duplicate(
     sukima_logo=glb.glb.sukima_logo
 ):
-    if (glb.glb.sukima_logo_flg):
+    if (glb.glb.glb_exist_obj_chk(obj_list=[sukima_logo], gen_flag=False)):
         obj_name=sukima_logo
         # Mode切り替え
         bpy.ops.object.mode_set(mode='OBJECT')

@@ -13,8 +13,8 @@ if git_root:
     if parent not in sys.path:
         sys.path.append(parent)
 # 共通設定
-import BPY_3DCG_ENV.Common.common_top as common_top
-from BPY_3DCG_ENV.Common.common_top import *
+import bpy_text_lab.Common.common_top as common_top
+from bpy_text_lab.Common.common_top import *
 #========================================================================================
 
 # ======================================================================

@@ -1,10 +1,10 @@
 # ==================================================================
 # = Pre Process
 # ==================================================================
-from BPY_3DCG_ENV.Assets.mdl.{$PROJECT_NAME} import (
+from bpy_text_lab.Assets.mdl.{$PROJECT_NAME} import (
     glb, wrap, d00_mdl, d01_uv_unwrap, d02_mtal, d03_bake, d04_bone, d05_animation, d06_shape_key
 )
-from BPY_3DCG_ENV.Assets.parts import (
+from bpy_text_lab.Assets.parts import (
     model, material
 )
 # ==================================================================
@@ -17,7 +17,7 @@ from BPY_3DCG_ENV.Assets.parts import (
 def sample_obj_mdl(
     sample_obj=glb.glb.sample_obj
 ):
-    if (glb.glb.sample_obj_flg):
+    if (glb.glb.glb_exist_obj_chk(obj_list=[sample_obj], gen_flag=True)):
         # オブジェクト追加
         bpy.ops.mesh.primitive_cube_add(
             size=1                  # 1辺長

@@ -14,8 +14,8 @@ if git_root:
     if parent not in sys.path:
         sys.path.append(parent)
 # Common Setting
-import BPY_3DCG_ENV.Common.common_top as common_top
-from BPY_3DCG_ENV.Common.common_top import *
+import bpy_text_lab.Common.common_top as common_top
+from bpy_text_lab.Common.common_top import *
 # Reload Files
 common_top._auto_reload_modules([mm_cm_lib, mdl_cm_lib, mtal_cm_lib, ani_cm_lib, common_top])
 #========================================================================================
@@ -23,10 +23,10 @@ common_top._auto_reload_modules([mm_cm_lib, mdl_cm_lib, mtal_cm_lib, ani_cm_lib,
 # ==================================================================
 # = Pre Process
 # ==================================================================
-from BPY_3DCG_ENV.Assets.mdl.SAMPLE_MODEL import (
+from bpy_text_lab.Assets.mdl.SAMPLE_MODEL import (
     glb, wrap, d00_mdl, d01_uv_unwrap, d02_mtal, d03_bake, d04_bone, d05_animation, d06_shape_key
 )
-from BPY_3DCG_ENV.Assets.parts import (
+from bpy_text_lab.Assets.parts import (
     model, material
 )
 # 環境初期化
@@ -56,7 +56,7 @@ glb.glb.glb_require_new_objects()
 # --------------------------------
 # Base Light 作成 & 配置
 # --------------------------------
-if (glb.glb.base_light_flg):
+if (glb.glb.glb_exist_obj_chk(obj_list=[glb.glb.base_light], gen_flag=True)):
     # ポイントライト追加
     bpy.ops.object.light_add(
         type='POINT'
