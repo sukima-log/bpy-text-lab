@@ -525,3 +525,50 @@ def collection_create_or_move(
     # Change Original Mode
     if current_mode and bpy.context.object and bpy.context.object.type == 'MESH':
         bpy.ops.object.mode_set(mode=current_mode)
+
+# ========================================================================
+# = ▼ 参考画像読み込み
+# ========================================================================
+def image_reference_import(
+    override
+,   relative_img_path="/ref_img/sample.png"
+,   img_name="img_name"
+,   location=(0, 0, 0)
+,   rotation=(0, 0, 0)
+,   scale=(1, 1, 1)
+,   exist_flg=True
+,   img_alpha=0.3
+,   empty_image_side='FRONT'
+):
+    if (exist_flg):
+        # 参考画像読み込み
+        bpy.ops.object.empty_image_add(
+            filepath=script_dir + relative_img_path
+        ,   relative_path=True
+        ,   align='WORLD'
+        ,   location=(0, 0, 0)
+        ,   rotation=rotation
+        ,   scale=(1, 1, 1)
+        ,   background=False
+        )
+        # オブジェクト名設定
+        bpy.context.object.name = img_name
+        # 上書きしたコンテキストでオペレーターを実行
+        with bpy.context.temp_override(**override):
+            # ピボット設定
+            bpy.context.scene.tool_settings.transform_pivot_point = 'CURSOR'
+            # 要素サイズ変更
+            bpy.ops.transform.resize(
+                value=scale
+            ,   orient_type='GLOBAL'
+            )
+        # オブジェクト移動
+        bpy.ops.transform.translate(
+            value=location
+        ,   orient_type='GLOBAL'
+        )
+        # 不透明度
+        bpy.context.object.use_empty_image_alpha = True
+        bpy.context.object.color[3] = img_alpha
+        # 表示向き設定
+        bpy.context.object.empty_image_side = empty_image_side

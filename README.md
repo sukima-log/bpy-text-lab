@@ -8,7 +8,8 @@ Blender上でのすべての操作を Python スクリプトで制御するこ�
 - **複数人での共同作業**
 - **コピペで他プロジェクトへ流用**
 - **Blender特有の操作感に慣れる手間の削減**
-- **作成途中段階への変更**
+- **作成途中段階への変更作業容易化**
+- **3D制作ノウハウの共有・再現基盤**
 
 の実現を目指します。
 
@@ -52,7 +53,7 @@ Git Root
 │   └── mtal_cm_lib.py                      // マテリアル/テクスチャ用共通関数とりまとめ用
 ├── Output                              // モデルの出力用
 │   └── exports
-├── README.md                           // 本ファイル
+├── README.md                           // このREADMEファイル
 ├── requirements.txt
 ├── Setting                             // Blenderの設定ファイルなど保存用 (任意)
 └── Tools                               // あると便利な自作ツール格納場所
@@ -73,7 +74,7 @@ Git Root
 このリポジトリに含まれる **「SAMPLE_MODEL」** から生成できるサンプルモデルを以下で確認できます。
 
 👉 [サンプルモデルを表示する](https://sukima-log.github.io/Pages_bpy-text-lab_sample/)
-（作成できる3Dモデルを確認できます）
+（作成できる3Dモデルの例を確認できます）
 
 
 ## 🧩 Supported Versions
@@ -196,8 +197,10 @@ Tools/Export/export_glb_gltf.py
 
 | Version | Date       | Type    | Description                          | Author |
 |---------|------------|---------|--------------------------------------|-----------|
-| 0.1   | 2025-10-0x | Added   | 初回リリース <br/> テンプレート追加 | sukimalog.com |
-| x.x.x   | xxxx-xx-xx | xxxxxxx | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | |
+| 0.1   | 2025-11-01 | Added   | 初回リリース <br/> テンプレート追加 | sukimalog.com |
+| 0.11   | 2025-11-02 | Added | 参考画像読み込み関数追加 <br /> image_reference_import | sukimalog.com |
+| x.x.x   | xxxx-xx-xx | xxxxx   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | |
+| x.x.x   | xxxx-xx-xx | xxxxx   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | |
 | x.x.x   | xxxx-xx-xx | xxxxx   | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | |
 
 
