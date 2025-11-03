@@ -8,13 +8,11 @@ git_root = subprocess.run(
     stdout=subprocess.PIPE, text=True
 ).stdout.strip()
 # ルートの1つ上をsys.pathへ
-if git_root:
-    parent = os.path.dirname(git_root)
-    if parent not in sys.path:
-        sys.path.append(parent)
+if git_root and git_root not in sys.path:
+    sys.path.append(git_root)
 # 共通設定
-import bpy_text_lab.Common.common_top as common_top
-from bpy_text_lab.Common.common_top import *
+import Common.common_top as common_top
+from Common.common_top import *
 #========================================================================================
 
 # ======================================================================
