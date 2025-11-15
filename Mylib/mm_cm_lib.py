@@ -581,6 +581,10 @@ def glb_exist_obj_chk(obj_list=["object_name"], EXIST_FLAG_DICT=None, gen_flag=F
     - gen_flag に応じて辞書の参照/更新
     """
 
+    if not isinstance(obj_list, list):
+        print("Error: data is not a list. Program will exit.")
+        sys.exit(1)   # 異常終了コード1で終了
+
     # --- ヘルパー関数 ---
     def object_exists(name):
         """オブジェクト（メッシュ/Empty/アーマチュア）が存在するか"""
